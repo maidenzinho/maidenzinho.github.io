@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Calculadora</title>
+</head>
+<body>
+    <div>
+    <div>
+        <h1>Calculadora</h1>
+        <input type="number" id="var1">
+        <input type="number" id="var2">
+        =
+        <button onclick="soma()">+</button>
+        <input type="text" id="res1" placeholder="Resultado">
+        <button onclick="limpasoma()">Limpar</button>
+    </div>
+
+    <div>   
+        <input type="number" id="var3">
+        <input type="number" id="var4">
+        =
+        <button onclick="sub()">-</button>
+        <input type="text" id="res2" placeholder="Resultado">
+        <button onclick="limpasub()">Limpar</button>
+    </div>
+
+    <div>  
+        <input type="number" id="var5">
+        <input type="number" id="var6">
+        =
+        <button onclick="mult()">X</button>
+        <input type="text" id="res3"  placeholder="Resultado">
+        <button onclick="limpamulti()">Limpar</button>
+    </div>
+
+    <div>   
+        <input type="number" id="var7">
+        <input type="number" id="var8">
+        =
+        <button onclick="div()">/</button>
+        <input type="text" id="res4"  placeholder="Resultado">
+        <button onclick="limpadiv()">Limpar</button>
+    </div>
+    </div>
+
+    <script>
+        function soma(){
+            var var1 = parseInt(document.getElementById("var1").value);
+            var var2 = parseInt(document.getElementById("var2").value);
+            var soma = var1 + var2;
+            document.getElementById("res1").value = soma;
+        }
+        function limpasoma(){
+            document.getElementById("res1").value = '';
+        }
+
+        function sub(){
+            var var1 = parseInt(document.getElementById("var3").value);
+            var var2 = parseInt(document.getElementById("var4").value);
+            var soma = var1 - var2;
+            document.getElementById("res2").value = soma;
+        }
+        function limpasub(){
+            document.getElementById("res2").value = '';
+        }
+
+        function mult(){
+            var var1 = parseInt(document.getElementById("var5").value);
+            var var2 = parseInt(document.getElementById("var6").value);
+            var soma = var1 * var2;
+            document.getElementById("res3").value = soma;
+        }
+        function limpamulti(){
+            document.getElementById("res3").value = '';
+        }
+
+        function div(){
+            var var1 = parseInt(document.getElementById("var7").value);
+            var var2 = parseInt(document.getElementById("var8").value);
+            var soma = var1 / var2;
+            document.getElementById("res4").value = soma;
+        }
+        function limpadiv(){
+            document.getElementById("res4").value = '';
+        }
+
+    </script>
+</body>
+</html>
