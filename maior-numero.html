@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Qual é maior ? </title>
+
+
+    
+</head>
+<body>
+    <input id="campo1" type="number">
+    <input type="number" id="campo2">
+    <button onclick="funcao()">maior ou igual</button>
+
+    <script>
+        function funcao() {
+            var valor1 = document.getElementById("campo1").value;
+            var valor2 = document.getElementById("campo2").value;
+            if(valor1 > valor2){
+                window.alert((parseInt(valor1))+" é maior que "+ (parseInt(valor2)));
+            } else if (valor1 < valor2){
+                window.alert((parseInt(valor1) +" é menor que " +(parseInt(valor2))));
+            } else {
+                window.alert((parseInt(valor1))+" é igual a "+(parseInt(valor2)))
+            }
+            
+        }
+
+
+    </script>
+
+
+</body>
+</html>
