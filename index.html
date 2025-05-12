@@ -1,0 +1,268 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cybersecurity World</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Container principal -->
+    <div class="game-container">
+        <!-- Game screen - tela principal do portfólio -->
+        <div class="game-screen">
+            <!-- Menu de navegação -->
+            <div class="game-menu">
+                <button class="menu-btn active" data-section="home">HOME</button>
+                <button class="menu-btn" data-section="about">ABOUT</button>
+                <button class="menu-btn" data-section="skills">SKILLS</button>
+                <button class="menu-btn" data-section="projects">PROJECTS</button>
+                <button class="menu-btn" data-section="contact">CONTACT</button>
+                <button class="menu-btn" data-section="ctf">CTF</button>
+            </div>
+            
+            <!-- Seção de conteúdo principal -->
+            <div class="content-area">
+                <!-- HOME -->
+                <section id="home" class="active">
+                    <div class="player-avatar"></div>
+                    <div class="typing-text">
+                        <h1>Hello World!</h1>
+                        <p>Welcome to my Cybersecurity World</p>
+                        <!--<p class="blink">PRESS START TO EXPLORE</p>-->
+                    </div>
+                </section>
+                
+                <!-- ABOUT -->
+                <section id="about">
+                    <h2>ABOUT ME</h2>
+                    <div class="about-content">
+                        <div class="character-stats">
+                            <div class="stat-bar">
+                                <span>LVL: 3</span>
+                                <div class="progress-bar"><div class="progress" style="width: 20%"></div></div>
+                            </div>
+                            <div class="stat-bar">
+                                <span>EXP: 167</span>
+                                <div class="progress-bar"><div class="progress" style="width: 35%"></div></div>
+                            </div>
+                            <div class="stat-bar">
+                                <span>HP: 1000/1000</span>
+                                <div class="progress-bar"><div class="progress" style="width: 100%"></div></div>
+                            </div>
+                            <div class="stat-bar">
+                                <span>MP: 1000/1000</span>
+                                <div class="progress-bar"><div class="progress" style="width: 100%"></div></div>
+                            </div>
+                        </div>
+                        <div class="character-bio">
+                            <p>Sou um profissional de cibersegurança apaixonado por proteger ativos digitais e identificar vulnerabilidades antes que pessoas mal-intencionadas o façam.</p>
+                            <p>Com experiência em testes de invasão, segurança de redes e avaliação de vulnerabilidades, tenho ajudado organizações a fortalecer sua postura de segurança.</p>
+                            <p>Minha jornada começou com uma fascinação por entender como os sistemas funcionam e evoluiu para uma missão de tornar o mundo digital mais seguro.</p>
+                            <p>Sou bacharelando em Cibersegurança pela PUCPR e mantenho projetos públicos no meu GitHub clicando em contact.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- SKILLS -->
+                <section id="skills">
+                    <h2>SKILLS & ABILITIES</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon penetration"></div>
+                            <span>Penetration Testing</span>
+                            <div class="skill-level">
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon network"></div>
+                            <span>Network Security</span>
+                            <div class="skill-level">
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon malware"></div>
+                            <span>Malware Analysis</span>
+                            <div class="skill-level">
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon coding"></div>
+                            <span>Secure Coding</span>
+                            <div class="skill-level">
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon forensics"></div>
+                            <span>Digital Forensics</span>
+                            <div class="skill-level">
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon cryptography"></div>
+                            <span>Cryptography</span>
+                            <div class="skill-level">
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star active"></div>
+                                <div class="star"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- PROJECTS -->
+                <section id="projects">
+                    <h2>MY PROJECTS</h2>
+                    <div class="projects-grid">
+                        <!-- Os projetos serão carregados dinamicamente pelo JavaScript -->
+                    </div>
+                    <div class="project-details">
+                        <div class="close-btn">×</div>
+                        <h3 id="project-title">Project Title</h3>
+                        <div class="project-content">
+                            <p id="project-description">Loading project details...</p>
+                            <div class="project-techs" id="project-techs"></div>
+                            <a id="project-link" href="#" target="_blank" class="action-btn">View on GitHub</a>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- CONTACT -->
+                <section id="contact">
+                    <h2>CONTACT ME</h2>
+                    <div class="contact-content">
+                        <div class="contact-form">
+                            <div class="form-group">
+                                <label for="name">YOUR NAME:</label>
+                                <input type="text" id="name" class="retro-input" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">YOUR EMAIL:</label>
+                                <input type="email" id="email" class="retro-input" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">MESSAGE:</label>
+                                <textarea id="message" class="retro-input" placeholder="Type your message here"></textarea>
+                            </div>
+                            <button id="send-btn" class="action-btn">SEND MESSAGE</button>
+                            <p id="form-status" class="message-status"></p>
+                        </div>
+                        <div class="social-links">
+                            <h3>OR FIND ME HERE:</h3>
+                            <a href="https://github.com/maidenzinho" target="_blank" class="social-btn github">GitHub</a>
+                            <a href="https://linkedin.com/in/felipe-fernandes-bortolino-3953041a6" target="_blank" class="social-btn linkedin">LinkedIn</a>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- CTF -->
+                <section id="ctf">
+                    <h2>MINI CTF CHALLENGE</h2>
+                    <div class="ctf-content">
+                        <div class="ctf-intro">
+                            <p>Welcome to the mini CTF challenge! Find the hidden flag on this page to win.</p>
+                            <p>Format: FLAG{secret_text}</p>
+                            <button id="ctf-start" class="action-btn">START CHALLENGE</button>
+                        </div>
+                        <div class="ctf-game">
+                            <div class="ctf-terminal">
+                                <div class="terminal-header">SECURESHELL v1.0</div>
+                                <div class="terminal-body" id="terminal-output">
+                                    // Challenge will appear here...
+                                </div>
+                                <div class="terminal-input">
+                                    <span>$</span>
+                                    <input type="text" id="flag-input" placeholder="Enter flag here..." autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="ctf-hints">
+                                <h4>HINTS:</h4>
+                                <ul id="hints-list">
+                                    <li>The flag is hidden somewhere in the page's code</li>
+                                    <li>Use the browser's developer tools to look around</li>
+                                    <li>Remember to check for hidden or obscured elements</li>
+                                </ul>
+                                <button id="reveal-hint" class="action-btn">REVEAL HINT (-10 POINTS)</button>
+                                <p id="extra-hint" class="hidden">Check the page source, but not everything is visible at first glance.</p>
+                            </div>
+                            <div class="ctf-scoreboard">
+                                <h4>SCORE: <span id="ctf-score">100</span></h4>
+                                <p>Time: <span id="ctf-timer">00:00</span></p>
+                            </div>
+                        </div>
+                        <div class="ctf-complete">
+                            <h3>CONGRATULATIONS!</h3>
+                            <p>You've captured the flag!</p>
+                            <div class="final-score">
+                                <p>Final Score: <span id="final-score">0</span></p>
+                                <p>Time: <span id="final-time">00:00</span></p>
+                            </div>
+                            <button id="ctf-reset" class="action-btn">PLAY AGAIN</button>
+                        </div>
+                    </div>
+
+                    <div id="hidden-flag" class="hidden"><!--FLAG{c4n_y0u_f1nd_m3}--></div>
+                </section>
+            </div>
+        </div>
+        
+        <!-- Controles SNES -->
+        <div class="game-controls">
+            <div class="d-pad">
+                <button class="d-up">▲</button>
+                <button class="d-right">▶</button>
+                <button class="d-down">▼</button>
+                <button class="d-left">◀</button>
+                <div class="d-center"></div>
+            </div>
+            <div class="action-buttons">
+                <button class="btn-y">Y</button>
+                <button class="btn-x">X</button>
+                <button class="btn-b">B</button>
+                <button class="btn-a">A</button>
+            </div>
+            <div class="center-buttons">
+                <button class="btn-select">SELECT</button>
+                <button class="btn-start">START</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Efeitos de som -->
+    <audio id="btn-sound" src="/sounds/button.mp3"></audio>
+    <audio id="select-sound" src="/sounds/select.mp3"></audio>
+    <audio id="startup-sound" src="/sounds/startup.mp3"></audio>
+    
+    <!-- Scripts -->
+    <script src="/js/script.js"></script>
+</body>
+</html>
