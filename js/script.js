@@ -10,17 +10,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const projects = [
         {
-            title: "VulnScanner Pro",
-            subtitle: "Scanner de vulnerabilidades em redes",
-            description: "Uma ferramenta robusta para detectar vulnerabilidades em redes corporativas. Identifica pontos fracos de segurança, verifica configurações de firewall e testa contra exploits conhecidos.",
-            techs: ["Python", "Nmap", "Metasploit", "Docker"],
-            link: "https://github.com/maidenzinho/vulnscannerpro"
+            title: "AuChei",
+            subtitle: "AuChei é um sistema que te ajuda a achar seu bichinho",
+            description: "Sistema com arquitetura robusta e segura para encontrar seu animalzinho perdido.",
+            techs: ["PHP", "HTML", "SQL", "JS", "CSS"],
+            link: "https://github.com/maidenzinho/AuChei"
         },
         {
-            title: "PacketSniffer",
-            subtitle: "Analisador de pacotes de rede",
-            description: "Ferramenta para captura e análise de pacotes de rede em tempo real. Suporta protocolos como TCP/IP, UDP, HTTP e identifica anomalias no tráfego de rede.",
-            techs: ["C++", "libpcap", "Qt Framework"],
+            title: "Mini Linux em RUST",
+            subtitle: "Um mini Linux em RUST",
+            description: "Esse sistema consiste em algo parecido com Linux, implementando sistemas de arquivos, diretórios, usuários, grupos e permissões.",
+            techs: ["RUST"],
             link: "https://github.com/maidenzinho/packetsniffer"
         },
         {
