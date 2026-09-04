@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>maidenzinho</title>
+  <meta name="description" content="Felipe Fernandes — estudante de Cibersegurança (PUCPR) e Red Team. Portfólio, projetos e um segredo escondido." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050a0f'/%3E%3Ctext x='16' y='23' font-size='18' text-anchor='middle' fill='%2300ffe0' font-family='monospace'%3E%3E_%3C/text%3E%3C/svg%3E" />
+  <!--
+    ════════════════════════════════════════════════════════════════
+    [ MAIDENZINHO // RED TEAM ZONE ]
+
+    you are being watched. this page is only the surface.
+
+    CTF // 3 fases — abra a shell (❯_ shell, canto inferior esquerdo).
+    fase-1 (recon): as vezes o óbvio está escondido na primeira camada.
+      → flag{r3c0n_0lho_v1v0}  (isso é a fase 1; verifique com: verify)
+
+    secret hunt: part-A.r13 = "chPcE_2b25_"
+      → find the other fragments, decode, assemble and verify.
+      more: view the shell (bottom-left) and type help.
+    ════════════════════════════════════════════════════════════════
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="booting">
+
+  <div id="progress" aria-hidden="true"></div>
+
+  <!-- boot overlay -->
+  <div class="boot" id="boot" aria-hidden="false">
+    <div class="boot-term">
+      <div class="boot-line"><span class="b-g">➜</span> maidenzinho-boot</div>
+      <div class="boot-line" id="bootLine">&nbsp;</div>
+      <div class="boot-cursor">▊</div>
+    </div>
+    <div class="boot-progress"><i id="bootFill"></i></div>
+  </div>
+
+  <canvas id="rain" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="glow-orb" id="glow" aria-hidden="true"></div>
+
+  <!-- custom cursor -->
+  <div class="cursor-dot" id="cDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cRing" aria-hidden="true"></div>
+  <div class="cursor-label" id="cLabel" aria-hidden="true">open</div>
+
+  <!-- top bar -->
+  <header class="topbar">
+    <a class="brand" href="#top">
+      <span class="brand-prompt">&gt;_</span>
+      <span class="brand-name">maidenzinho</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#sobre">sobre</a>
+      <a href="#skills">skills</a>
+      <a href="#projetos">projetos</a>
+      <a href="#contato">contato</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+
+    <!-- ══════════ HERO ══════════ -->
+    <section class="hero" id="sobre">
+      <div class="hero-floor" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="hero-status">
+          <span class="pulse-dot"></span> system online &nbsp;//&nbsp; pucpr &nbsp;//&nbsp; <span id="clock">--:--:--</span> &nbsp;//&nbsp; <span class="uip">25.02.25.11</span>
+        </p>
+        <h1 class="glitch" data-text="FELIPE FERNANDES">FELIPE FERNANDES</h1>
+        <h2 class="sub">STUDENT · <span class="accent">CYBERSECURITY</span> · <span class="accent2">RED&nbsp;TEAM</span></h2>
+
+        <div class="term hero-term glowframe reveal-up">
+          <div class="term-bar">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="term-title">guest@maidenzinho: ~</span>
+            <span class="term-tag">RECON</span>
+          </div>
+          <div class="term-body" id="heroType">
+            <div class="tline"><span class="tp">root@maidenzinho</span><span class="tc">:~$</span>&nbsp;whoami</div>
+            <div class="tline out">felipe — cibersegurança · red team 🚩</div>
+            <div class="tline out hidden" data-out="1"></div>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a class="btn ghost magnetic" href="#projetos">ver projetos<span class="btn-arrow">→</span></a>
+          <a class="btn solid magnetic" href="https://github.com/maidenzinho" target="_blank" rel="noopener">github<span class="btn-arrow">↗</span></a>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#sobre" aria-hidden="false">scroll<span class="wheel"></span></a>
+    </section>
+
+    <!-- ══════════ MARQUEE ══════════ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="tickerTrack">
+        <span>red team</span><span>pentest</span><span>python</span><span>rust</span>
+        <span>cibersegurança</span><span>capture the flag</span><span>monitoramento</span>
+        <span>privileged access</span><span>linux</span><span>pucpr</span>
+      </div>
+    </div>
+
+    <!-- ══════════ ABOUT / WHOAMI ══════════ -->
+    <section class="section" id="whoami">
+      <!-- secret hunt: part-B.r13 = "s0haq_" -->
+      <div class="wrap">
+        <h2 class="sec-title"><span class="tick">&gt;</span> whoami<span class="caret">_</span></h2>
+        <div class="cols">
+          <div class="card reveal">
+            <p class="reveal-item">
+              <span class="k">&nbsp;</span>Estudante de <b>Cibersegurança</b> na <b>PUCPR</b>, com foco em <span class="accent">Red Team</span> — ética aplicada a atacar sistemas para defendê-los melhor. Curitiba, Brasil.
+            </p>
+            <p class="reveal-item">
+              <span class="k">&nbsp;</span>Construo ferramentas de <b>monitoramento</b>, arquiteturas <b>PAM</b>, automação em <b>Python</b> e sistemas em <b>Rust</b>. Curioso por causa, sempre querendo quebrar e entender o que está por trás da interface.
+            </p>
+            <p class="reveal-item">
+              <span class="k">&nbsp;</span>Além do mundo cyber: apaixonado por <b>jogos</b>, RPGs e projetos que misturam lógica com criatividade.
+            </p>
+          </div>
+          <div class="card codecard reveal">
+            <div class="term-body">
+              <div class="tline"><span class="tp">felipe</span><span class="tc">$</span>&nbsp;cat profile.json</div>
+              <div class="tline out">{</div>
+              <div class="tline out">&nbsp;&nbsp;<span class="p-key">"nome"</span>: "Felipe Fernandes",</div>
+              <div class="tline out">&nbsp;&nbsp;<span class="p-key">"nick"</span>: "maidenzinho",</div>
+              <div class="tline out">&nbsp;&nbsp;<span class="p-key">"area"</span>: "Red Team 🚩",</div>
+              <div class="tline out">&nbsp;&nbsp;<span class="p-key">"escola"</span>: "PUCPR",</div>
+              <div class="tline out">&nbsp;&nbsp;<span class="p-key">"base"</span>: "Curitiba · BR",</div>
+              <div class="tline out">&nbsp;&nbsp;<span class="p-key">"languages"</span>: [python, rust, java, php, bash, asm, sql],</div>
+              <div class="tline out">&nbsp;&nbsp;<span class="p-key">"mode"</span>: "attack ✦ defend"</div>
+              <div class="tline out">}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- roadmap -->
+        <div class="roadmap">
+          <div class="rm reveal">
+            <div class="rm-node now"></div>
+            <div class="rm-date">now</div>
+            <h4>Red Team &amp; CTF</h4>
+            <p>Praticando attack &amp; defense, resolvendo máquinas e construindo labs.</p>
+          </div>
+          <div class="rm reveal">
+            <div class="rm-node"></div>
+            <div class="rm-date">2024</div>
+            <h4>Graduação em Cibersegurança</h4>
+            <p>PUCPR — monitoramento, PAM, redes ofensivas e automação com Python/Rust.</p>
+          </div>
+          <div class="rm reveal">
+            <div class="rm-node"></div>
+            <div class="rm-date">roadmap</div>
+            <h4>Carreira em Red Team</h4>
+            <p>Explorar além das bordas e defender o que ainda não foi mapeado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ SKILLS ══════════ -->
+    <!-- secret hunt: fase-2 (criptografia) — esta string está em base64:
+         ZmxhZ3tiNHMzXzY0X240X3YzaWF9
+         decodifique com: decode <string> na shell -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <h2 class="sec-title"><span class="tick">&gt;</span> skills<span class="caret">_</span></h2>
+
+        <div class="skill-cols">
+          <div class="skill-block reveal">
+            <h3>operações</h3>
+            <ul>
+              <li><span class="sb-name">Red Teaming &amp; Pentest</span><div class="sb"><i style="--w:92%"><b>92</b></i></div></li>
+              <li><span class="sb-name">Monitoramento / SOC</span><div class="sb"><i style="--w:80%"><b>80</b></i></div></li>
+              <li><span class="sb-name">Linux &amp; Shell</span><div class="sb"><i style="--w:86%"><b>86</b></i></div></li>
+              <li><span class="sb-name">Redes &amp; Protocolos</span><div class="sb"><i style="--w:75%"><b>75</b></i></div></li>
+            </ul>
+          </div>
+          <div class="skill-block reveal">
+            <h3>ferramentas</h3>
+            <div class="tag-cloud">
+              <span class="tag">Burp Suite</span><span class="tag">Nmap</span><span class="tag">Metasploit</span>
+              <span class="tag">Grafana</span><span class="tag">Suricata</span><span class="tag">Wireshark</span>
+              <span class="tag">Git</span><span class="tag">Docker</span><span class="tag">Firebase</span>
+              <span class="tag">Hydra</span><span class="tag">John</span><span class="tag">Python</span>
+            </div>
+          </div>
+          <div class="skill-block reveal">
+            <h3>linguagens</h3>
+            <div class="tag-cloud lang">
+              <span class="tag py">Python</span><span class="tag rs">Rust</span><span class="tag">Java</span>
+              <span class="tag">PHP</span><span class="tag">SQL</span><span class="tag js">JS/TS</span>
+              <span class="tag">Bash</span><span class="tag">HTML/CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ STATS (live github) ══════════ -->
+    <section class="section stats-sec" id="stats">
+      <div class="wrap">
+        <div class="stats" id="stats">
+          <div class="stat reveal">
+            <span class="s-num" data-count="0" data-prefix="">0</span>
+            <span class="s-lab">projetos no github</span>
+          </div>
+          <div class="stat reveal">
+            <span class="s-num" data-count="0">0</span>
+            <span class="s-lab">estrelas totais</span>
+          </div>
+          <div class="stat reveal">
+            <span class="s-num" data-count="0" data-langs="1">0</span>
+            <span class="s-lab">linguagens dominadas</span>
+          </div>
+          <div class="stat reveal">
+            <span class="s-num" data-count="2024" data-fixed="2024">2024</span>
+            <span class="s-lab">na área desde</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ PROJECTS ══════════ -->
+    <section class="section" id="projetos">
+      <div class="wrap">
+        <h2 class="sec-title"><span class="tick">&gt;</span> projetos<span class="caret">_</span></h2>
+
+        <!-- spotlight -->
+        <div class="spotlight reveal" id="spot">
+          <div class="spot-bg" aria-hidden="true"></div>
+          <div class="spot-info">
+            <span class="p-fold">featured · social://pucpr</span>
+            <h3 class="spot-title">Vibez</h3>
+            <p class="spot-desc">Rede social construída por estudantes da PUCPR em desenvolvimento — feed, perfis e conexões com foco em segurança desde o início.</p>
+            <div class="p-tags"><span class="p-tag">PHP</span><span class="p-tag">MySQL</span><span class="p-tag">Social</span><span class="p-tag">PUCPR</span></div>
+            <a class="btn ghost magnetic" href="https://github.com/maidenzinho/Vibez" target="_blank" rel="noopener">ver código<span class="btn-arrow">↗</span></a>
+          </div>
+          <div class="spot-code glowframe">
+            <div class="term-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="term-title">schema.sql / vibez</span></div>
+            <div class="term-body">
+              <div class="tline out"><span class="sy">CREATE TABLE</span> usuarios <span class="sy">(</span></div>
+              <div class="tline out">&nbsp;&nbsp;<span class="p-key">id</span> INT PRIMARY KEY AUTO_INCREMENT,</div>
+              <div class="tline out">&nbsp;&nbsp;<span class="p-key">nick</span> VARCHAR(32) UNIQUE,</div>
+              <div class="tline out">&nbsp;&nbsp;<span class="p-key">senha_hash</span> VARCHAR(255),</div>
+              <div class="tline out">&nbsp;&nbsp;<span class="p-key">bio</span> TEXT,</div>
+              <div class="tline out"><span class="sy">)</span>;</div>
+              <div class="tline out"><span class="sy">CREATE TABLE</span> posts <span class="sy">( ... )</span>;</div>
+              <div class="tline out"><span class="t-cmt">-- o que é público é o que você mostra.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid" id="grid">
+          <!-- injected by JS (secondary projects) -->
+        </div>
+
+        <div class="more reveal">
+          <span class="more-line"></span>
+          <a href="https://github.com/maidenzinho" target="_blank" rel="noopener">+ todos os projetos no github</a>
+          <span class="more-line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CONTACT ══════════ -->
+    <section class="section" id="contato">
+      <!-- secret hunt: part-C.r13 = "z3" | format: flag{<A><B><C>} → unlock: verify flag{...} na shell -->
+      <div class="wrap">
+        <h2 class="sec-title"><span class="tick">&gt;</span> contato<span class="caret">_</span></h2>
+        <p class="contact-sub reveal">aberto a desafios, projetos e ideias. encontre-me na rede.</p>
+        <div class="socials reveal">
+          <a class="soc magnetic" href="https://github.com/maidenzinho" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17 4.7 18 5 18 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+            <span>github.com/maidenzinho</span>
+          </a>
+          <a class="soc magnetic" href="https://www.linkedin.com/in/felipe-fernandes-bortolino-3953041a6" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.2 8h4.6v14H.2V8zm7.6 0h4.4v1.9h.1c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 3 5.3 6.8V22h-4.6v-6.4c0-1.5 0-3.5-2.1-3.5s-2.5 1.7-2.5 3.4V22H7.8V8z"/></svg>
+            <span>linkedin.com/in/maidenzinho</span>
+          </a>
+          <a class="soc magnetic" href="https://x.com/imaidenx" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.2h3.7l-8.2 9.4L24 22.8h-7.6l-5.9-7.7-6.8 7.7H0l8.8-10L0 1.2h7.8l5.3 7 6.8-7zM17.6 20.6h2L6.4 3.2H4.2l13.4 17.4z"/></svg>
+            <span>@imaidenx</span>
+          </a>
+        </div>
+        <p class="cipher reveal">root@maidenzinho:~# <span class="blink">█</span></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <span>© <span id="year"></span> maidenzinho</span>
+    <span class="foot-sep">·</span>
+    <span>made with <span class="accent2">&lt;rust /&gt;</span> &amp; caffeine</span>
+    <span class="foot-sep">·</span>
+    <span class="foot-ghost">psst... <kbd>/</kbd></span>
+  </footer>
+
+  <!-- terminal trigger (bottom-left) -->
+  <button class="term-open" id="termOpen" aria-label="open terminal">❯_ shell</button>
+
+  <!-- hidden ghost shell -->
+  <div class="shell" id="shell" aria-hidden="true">
+    <div class="shell-head">
+      <span id="shellUser">guest@maidenzinho — ghost shell</span>
+      <span class="shell-prog" id="shellProg"></span>
+      <button class="shell-close" id="shellClose" aria-label="close terminal">✕</button>
+    </div>
+    <div class="shell-body" id="shellBody"></div>
+    <form class="shell-in" id="shellIn" autocomplete="off">
+      <span class="sp" id="shellPromptLeft">guest@maidenzinho</span><span class="sc">:~$</span>&nbsp;<input id="shellInput" spellcheck="false" autocomplete="off" aria-label="comando" />
+    </form>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- konami grant modal -->
+  <div class="modal" id="grantModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-eyes">▓▓▓▓▓▓▓▓▓▓</div>
+      <h3>ACCESS GRANTED</h3>
+      <p class="flag-final" id="finalFlag">flag{pucpr_2o25_f0und_m3}</p>
+      <p class="modal-note">Você encontrou o segredo do portfólio. Segurança é sobre as camadas que <em>você não vê</em> — bom trabalho, agente.</p>
+      <button class="btn solid" id="grantClose">fechar</button>
+    </div>
+  </div>
+
+  <noscript>Ative o JavaScript para a experiência completa.</noscript>
+  <script src="main.js"></script>
+</body>
+</html>
