@@ -21,35 +21,35 @@ document.addEventListener('DOMContentLoaded', function() {
             subtitle: "Um mini Linux em RUST",
             description: "Esse sistema consiste em algo parecido com Linux, implementando sistemas de arquivos, diretórios, usuários, grupos e permissões.",
             techs: ["RUST"],
-            link: "https://github.com/maidenzinho/packetsniffer"
+            link: "https://github.com/maidenzinho/Sistema-de-Diretorios-e-Permissoes-em-Rust"
         },
         {
-            title: "SecureAuth",
-            subtitle: "Sistema de autenticação multifator",
-            description: "Sistema de autenticação que implementa múltiplos fatores de segurança, incluindo tokens, biometria e geolocalização para garantir acesso seguro a recursos críticos.",
-            techs: ["JavaScript", "Node.js", "MongoDB", "OAuth2"],
-            link: "https://github.com/maidenzinho/secureauth"
+            title: "Vibez",
+            subtitle: "Rede Social em desenvolvimento",
+            description: "Rede Social em desenvolvimento, criada por estudantes da PUCPR, não recomendado para produtividade por enquanto, estamos trabalhando para deixar melhor e segura, logo mais teremos muitas features novas.",
+            techs: ["PHP", "JS", "SQL", "CSS", "HTML"],
+            link: "https://github.com/maidenzinho/Vibez"
         },
         {
-            title: "Malware Analyzer",
-            subtitle: "Sandbox para análise de malware",
-            description: "Ambiente isolado para análise comportamental de programas maliciosos. Monitora chamadas de sistema, acesso a arquivos e conexões de rede para identificar atividades suspeitas.",
-            techs: ["Python", "Cuckoo", "YARA Rules"],
-            link: "https://github.com/maidenzinho/malware-analyzer"
+            title: "VinhoSend",
+            subtitle: "VinhoSend é um marketplace simples de vinhos feito em PHP",
+            description: "VinhoSend é um marketplace simples de vinhos feito em PHP. O sistema permite cadastrar usuários, registrar vinhos, publicar anúncios, receber encomendas, acompanhar compras e gerar uma nota fiscal simples para controle da venda.",
+            techs: ["PHP", "HTML", "CSS", "JS", "SQL"],
+            link: "https://github.com/maidenzinho/VinhoSend"
         },
         {
-            title: "CryptShield",
-            subtitle: "Ferramenta de criptografia de dados",
-            description: "Biblioteca para criptografia e proteção de dados sensíveis, implementando algoritmos avançados como AES-256, RSA e curvas elípticas.",
-            techs: ["Rust", "OpenSSL", "WebAssembly"],
-            link: "https://github.com/maidenzinho/cryptshield"
+            title: "RPG em Java",
+            subtitle: "Vampire Survivor Mini - RPG em Java",
+            description: "Código e desenvolvimento do PjBL de POO.",
+            techs: ["JAVA", "CSV", "SWING"],
+            link: "https://github.com/maidenzinho/RPGemJava"
         },
         {
-            title: "WebPentestKit",
-            subtitle: "Kit de ferramentas para pentest web",
-            description: "Conjunto completo de ferramentas para testes de penetração em aplicações web. Inclui scanners, injetores SQL, fuzzing de URLs e testadores de XSS.",
-            techs: ["Python", "JavaScript", "BeautifulSoup", "Selenium"],
-            link: "https://github.com/maidenzinho/webpentestkit"
+            title: "Huffman",
+            subtitle: "Esse é um trabalho da matéria de Resolução de Problemas Estruturados em Computação",
+            description: "Esse é um trabalho da matéria de Resolução de Problemas Estruturados em Computação, a Árvore de Huffman.",
+            techs: ["Python"],
+            link: "https://github.com/maidenzinho/Huffman"
         }
     ];
     
