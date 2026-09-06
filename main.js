@@ -33,10 +33,14 @@
       desc:"Código e desenvolvimento de RPG — PjBL de POO (Cibersegurança, PUCPR 2025).",
       tags:["Java","POO","RPG"],
       link:"https://github.com/maidenzinho/RPGemJava" },
-    { title:"VinhoSend", fold:"mail://secure",
-      desc:"Projeto web para envio seguro de mensagens e conteúdo.",
+    { title:"VinhoSend", fold:"marketplace://secure",
+      desc:"Projeto web de marketplace de vinhos e coleção.",
       tags:["PHP","Web"],
       link:"https://github.com/maidenzinho/VinhoSend" }
+    { title:"ESP32 Bagde Digital GIF", fold:"mail://secure",
+      desc:"A ideia é criar aquelas telinhas com gifs personalizados(enviados pelo usuário) que ficam rodando infinitamente.",
+      tags:["C++","ESP32","ino"],
+      link:"https://github.com/maidenzinho/ESP32-Bagde-Digital-GIF" }
   ];
 
   /* ═══════════ CTF core ═══════════ */
