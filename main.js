@@ -36,7 +36,7 @@
     { title:"VinhoSend", fold:"marketplace://secure",
       desc:"Projeto web de marketplace de vinhos e coleção.",
       tags:["PHP","Web"],
-      link:"https://github.com/maidenzinho/VinhoSend" }
+      link:"https://github.com/maidenzinho/VinhoSend" },
     { title:"ESP32 Bagde Digital GIF", fold:"esp32://gif",
       desc:"A ideia é criar aquelas telinhas com gifs personalizados(enviados pelo usuário) que ficam rodando infinitamente.",
       tags:["C++","ESP32","ino"],
